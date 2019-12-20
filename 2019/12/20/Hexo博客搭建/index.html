@@ -6,13 +6,22 @@
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
   
-  <title>Archives: 2019/12 | Hexo</title>
+  <title>Hexo博客搭建 | Hexo</title>
   <meta name="author" content="John Doe">
+  
+  <meta name="description" content="Hexo博客搭建   
+###1. 搭建博客使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js   
+
+首先在自己的电脑上创建一个空的文件夹’Hexo’  
+
+在gitbash中终端中通过cd指令进入到刚才创建的文件夹中   
+
+输入指令 npm install -g hexo">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Hexo博客搭建"/>
   <meta property="og:site_name" content="Hexo"/>
 
   
@@ -113,164 +122,114 @@ var _hmt = _hmt || [];
   	<div class="content">
     	 
 
-<!-- title -->
-<div class="page-header">
-  <h1 class="archive-title"><i class="fa fa-archive"></i> 2019/12</h1>
-</div>
 
-<div class="row page">
-  <!-- cols -->
-  
-  <div class="col-md-9">
 	
-
-	  <div id="top_search"></div>
-
-	  <div class="archive">
-		
-		
-		
-			
-			
-			<h4 class="archive-ul" data-toggle="collapse" data-target="#2019">2019<b class="caret"></b></h4>
-			<ul id="2019" class="collapse in">
-			
-		
-		<li class="listing-item">
-		<span class="date_class"> 2019-12-20 </span> &raquo;
-		
-		   <span class="title"><a href="/2019/12/20/Hexo博客搭建/" >Hexo博客搭建</a></span>
-		
-		</li>			
-		
-		
-		
-		<li class="listing-item">
-		<span class="date_class"> 2019-12-20 </span> &raquo;
-		
-		   <span class="title"><a href="/2019/12/20/Linux定时任务/" >Linux定时任务</a></span>
-		
-		</li>			
-		
-		
-		
-		<li class="listing-item">
-		<span class="date_class"> 2019-12-20 </span> &raquo;
-		
-		   <span class="title"><a href="/2019/12/20/shell编程/" >shell编程</a></span>
-		
-		</li>			
-		
-		
-		
-		<li class="listing-item">
-		<span class="date_class"> 2019-12-20 </span> &raquo;
-		
-		   <span class="title"><a href="/2019/12/20/git常用指令/" >git常用指令</a></span>
-		
-		</li>			
-		
-		
-		
-		<li class="listing-item">
-		<span class="date_class"> 2019-12-20 </span> &raquo;
-		
-		   <span class="title"><a href="/2019/12/20/CentOS 7.x及以上mysql安装和配置/" >CentOS 7.x及以上mysql安装和配置</a></span>
-		
-		</li>			
-		
-		
-		
-		<li class="listing-item">
-		<span class="date_class"> 2019-12-20 </span> &raquo;
-		
-		   <span class="title"><a href="/2019/12/20/1.日常指令/" >1.日常指令</a></span>
-		
-		</li>			
-		
-		
-		
-		<li class="listing-item">
-		<span class="date_class"> 2019-12-20 </span> &raquo;
-		
-		   <span class="title"><a href="/2019/12/20/vim的使用/" >vim的使用</a></span>
-		
-		</li>			
-		
-		</ul>
+		<div class="page-header">
+			<h1> Hexo博客搭建</h1>
 		</div>
-
-</div> <!-- col-md-9/col-md-12 -->
-
-
-<div class="col-md-3">
-	<div id="sidebar">
 	
-			
-  <div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
-   </div>  
-  <div id="local-search-result"></div>
-  </div>
 
 
-		
-			
-		
-			
 
-		
-			
-<div class="widget">
-  <h4>Recent Posts</h4>
-  <ul class="entry list-unstyled">
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>Hexo博客搭建   </p>
+<p>###1. 搭建博客<br>使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js   </p>
+<ol>
+<li><p>首先在自己的电脑上创建一个空的文件夹’Hexo’  </p>
+</li>
+<li><p>在gitbash中终端中通过<code>cd</code>指令进入到刚才创建的文件夹中   </p>
+</li>
+<li><p>输入指令 <code>npm install -g hexo</code> 安装Hexo  </p>
+</li>
+<li><p>输入指令 <code>hexo init</code> 进行初始化  </p>
+</li>
+<li><p>依次输入指令<code>npm install</code> <code>hexo server</code> 启动服务器<br>博客内容发生改变后可以通过<code>hexo clean</code> <code>hexo generate</code> <code>hexo deploy</code> <code>hexo server</code>刷新后重新启动<br>###2. 部署博客  </p>
+</li>
+<li><p>在github上创建一个空的仓库，仓库名： <code>用户名.github.io</code>  </p>
+</li>
+<li><p>修改博客本地仓库中的配置文件（Hexo目录下的_config.yml文件）,在文件末尾添加一下选中内容<br><img src="/Users/yuting/Desktop/Files/Hexo/image1.png" alt="">  </p>
+</li>
+<li><p>使用git部署, 输入指令<code>npm install hexo-deployer-git --save</code>  </p>
+</li>
+<li><p>输入指令<code>hexo clean</code> <code>hexo generate</code> <code>hexo deploy</code> 对博客进行提交</p>
+</li>
+</ol>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+
     
-      <li>
-        <a href="/2019/12/20/Hexo博客搭建/" ><i class="fa fa-file-o"></i>Hexo博客搭建</a>
-      </li>
     
-      <li>
-        <a href="/2019/12/20/Linux定时任务/" ><i class="fa fa-file-o"></i>Linux定时任务</a>
-      </li>
+    <a type="button" class="btn btn-default disabled"><i class="fa fa-arrow-circle-o-left"></i>Prev</a>
     
-      <li>
-        <a href="/2019/12/20/shell编程/" ><i class="fa fa-file-o"></i>shell编程</a>
-      </li>
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
     
-      <li>
-        <a href="/2019/12/20/git常用指令/" ><i class="fa fa-file-o"></i>git常用指令</a>
-      </li>
+    <a href="/2019/12/20/Linux定时任务/" type="button" class="btn btn-default ">Next<i
+                class="fa fa-arrow-circle-o-right"></i></a>
     
-      <li>
-        <a href="/2019/12/20/CentOS 7.x及以上mysql安装和配置/" ><i class="fa fa-file-o"></i>CentOS 7.x及以上mysql安装和配置</a>
-      </li>
+
     
-  </ul>
 </div>
 
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+    <h2 class="title">Comments</h2>
+
+    
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
 		
-			
-<div class="widget">
-	<h4>Links</h4>
-	<ul class="blogroll list-unstyled">
 	
-		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/hexo-theme-freemind" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/kristopolous/BOOTSTRA.386" title="BOOTSTRA.386's Github repository." target="_blank"]);">BOOTSTRA.386</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/blackshow/hexo-theme-freemind.386" title="Freemind.386's Github repository." target="_blank"]);">Freemind.386</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="http://www.github.com/blackshow" title="My Github account." target="_blank"]);">My Github</a></li>
-	
-	</ul>
-</div>
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
 
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2019-12-20 
+	</div>
+	
 
+	<!-- categories -->
+    
+
+	<!-- tags -->
 		
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
 
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
 
 
 

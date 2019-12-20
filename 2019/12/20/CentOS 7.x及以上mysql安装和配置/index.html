@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>CentOS 7.x及以上mysql安装和配置 | Hexo</title>
+  <meta name="author" content="John Doe">
+  
+  <meta name="description" content="CentOS 7.x及以上mysql安装和配置在安装MySQL之前需要先将服务器的3306端口打开
+
+下载MySQL源安装包:  wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm  
+
+安装MySQL源:">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="CentOS 7.x及以上mysql安装和配置"/>
+  <meta property="og:site_name" content="Hexo"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-70812759-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?cb5448498d7169c668b07c2b255d62c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<meta name="generator" content="Hexo 4.1.1"></head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Hexo</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Subscribe me.">
+			  <i class=""></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">
+			<h1> CentOS 7.x及以上mysql安装和配置</h1>
+		</div>
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h1 id="CentOS-7-x及以上mysql安装和配置"><a href="#CentOS-7-x及以上mysql安装和配置" class="headerlink" title="CentOS 7.x及以上mysql安装和配置"></a>CentOS 7.x及以上mysql安装和配置</h1><p>在安装MySQL之前需要先将服务器的3306端口打开</p>
+<ol>
+<li><p>下载MySQL源安装包:  <font style='color:green;'>wget <a href="http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm" target="_blank" rel="noopener">http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm</a> </font> </p>
+</li>
+<li><p>安装MySQL源:  <font style='color:green'>yum localinstall mysql57-community-release-el7-8.noarch.rpm</font></p>
+</li>
+<li><p>安装MySQL: <font style='color:green'>yum install mysql-community-server</font></p>
+</li>
+</ol>
+<ol start="4">
+<li><p>设置开机启动MySQL服务：<font style='color:green'>systemctl enable mysqld </font></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> CentOS7.x以上的版本，程序控制指令</span></span><br><span class="line">systemctl enable 程序名     -  开机自启动程序/服务</span><br><span class="line">systemctl start  程序名     -  启动程序/服务</span><br><span class="line">systemctl stop   程序名     -  关闭程序/服务</span><br><span class="line">systemctl restart  程序名   -  重启程序/服务</span><br><span class="line">systemctl disable  程序名   -  禁用程序/服务</span><br><span class="line">注意: 这儿的程序名一般需要在你安装的程序的原名的基础上加d</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> CentOS7.x一下的版本，不能用systemctl来控制，需要直接使用mysql去调用相关指令(因为一般不会向低版本发展，所以可以不用管，如果需要可以查资料，网上很多)</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="5">
+<li>启动MySQL服务<font style='color:green'>systemctl start mysqld  </font></li>
+</ol>
+<ol start="6">
+<li><p>设置MySQL登录密码</p>
+<p>这个过程比较麻烦，请严格按照以下步骤完成！</p>
+<p>第一步: 执行<font style='color:green'>systemctl stop mysqld</font>  关闭mysql服务</p>
+<p>第二步: 使用vim打开mysql配置文件 ‘\etc\my.cnf’,并且在末尾添加两行代码然后保存退出</p>
+<p>​          <font style='color:green'>validate_password=off</font></p>
+<p>​          <font style='color:green'>skip-grant-tables</font></p>
+<p><img src="/Users/yuting/Workspace/JAVA/%E6%8E%88%E8%AF%BE/%E6%96%87%E6%A1%A3/Linux%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3/img/mysql1.png" alt=""></p>
+</li>
+</ol>
+<p>   第三步：执行 <font style='color:green'>systemctl start mysqld</font> 开启mysql服务</p>
+<p>   第四步：在shell中执行 <font style='color:green'>mysql -u root -p</font> 设置密码（注意密码设置好以后要记住），并且按以下提示输入内容</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[root ~]# mysql -u root -p   (需要输入的指令)</span><br><span class="line">Enter password:   (这个地方自己设置密码，输入的时候不会有显示提示)</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is 10</span><br><span class="line">Server version: 5.7.28 MySQL Community Server (GPL)</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2019, Oracle and&#x2F;or its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and&#x2F;or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.</span><br><span class="line"></span><br><span class="line">mysql&gt; update mysql.user set authentication_string&#x3D;password(&quot;yuting123456&quot;) where user&#x3D;&quot;root&quot;;    (设置连接密码，将yuting123456设置为自己的密码就行，最好和上面的密码保持一致，否则容易混乱)</span><br><span class="line">Query OK, 1 row affected, 1 warning (0.00 sec)</span><br><span class="line">Rows matched: 1  Changed: 1  Warnings: 1</span><br><span class="line"></span><br><span class="line">mysql&gt; flush privileges;     (刷新权限)</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; quit;   (退出mysql指令模式)</span><br><span class="line">Bye</span><br></pre></td></tr></table></figure>
+
+<p>   第五步：执行<font style='color:green'>systemctl stop mysqld</font> 关闭mysql服务，然后重新打开mysql配置文件，注释或者删除之前添加的 <font style='color:green'>skip-grant-tables</font> ，保存退出后再执行 <font style='color:green'>systemctl start mysqld</font> 开启mysql服务</p>
+<p>   <img src="./img/mysql2.png" alt=""></p>
+   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 这个过程比较麻烦，请严格按照以下步骤完成！</span></span><br><span class="line">第一步: 执行 'systemctl stop mysqld' 关闭mysql服务</span><br><span class="line">第二步: 使用vim打开mysql配置文件 '\etc\my.cnf',并且在末尾添加两行代码(注意：只需要复制引号中的内容)然	   后保存退出：</span><br><span class="line">		'validate_password=off   #关闭mysql密码强度验证'</span><br><span class="line">		'skip-grant-tables    #跳过密码验证'</span><br><span class="line">		</span><br><span class="line">第三步：执行 'systemctl start mysqld' 开启mysql服务</span><br><span class="line">第四步：在shell中执行以'mysql -u root -p'设置密码(注意：密码设置好以后要记住)</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="7">
+<li><p>设置mysql能够远程访问</p>
+<p>执行<font style='color:green'>mysql -u root -p</font> 登录mysql添加远程连接权限。登录的密码就是之前设置的密码</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[root ~]# mysql -u root -p   (需要输入的指令)</span><br><span class="line">Enter password:     (输入密码)</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is 6</span><br><span class="line">Server version: 5.7.28 MySQL Community Server (GPL)</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2019, Oracle and&#x2F;or its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and&#x2F;or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.</span><br><span class="line"></span><br><span class="line">mysql&gt; grant all privileges on *.* to &#39;root&#39;@&#39;%&#39; identified by &#39;yuting123456&#39; with grant option;     (让所有的ip地址的设备都可以通过root账号并且密码是yuting123456进行连接；这个地方可以将%换成指定的某一个ip地址，%表示所有的ip)</span><br><span class="line">Query OK, 0 rows affected, 1 warning (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; flush privileges;  (刷新权限)</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>终于结束啦！！！</p>
+</li>
+</ol>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+
+    
+    
+    <a href="/2019/12/20/git常用指令/" type="button" class="btn btn-default"><i
+                class="fa fa-arrow-circle-o-left"></i> Prev</a>
+    
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+    
+    <a href="/2019/12/20/1.日常指令/" type="button" class="btn btn-default ">Next<i
+                class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+    <h2 class="title">Comments</h2>
+
+    
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2019-12-20 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2019 John Doe
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a>,<a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>,<a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>. 
+     <br> Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind.386</a>.    
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+</body>
+   </html>
