@@ -1,249 +1,253 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="pragma" content="no-cache">
-  <meta http-equiv="cache-control" content="no-cache">
-  <meta http-equiv="expires" content="0">
-  
-  <title>Linux定时任务 | 王霸天的博客</title>
-  <meta name="author" content="wangx">
-  
-  <meta name="description" content="Linux定时任务通过制定 ```crontab -e``编辑和开启定时任务
-1234567891011121314151617181920212223242526# 创建一个完整的定时任务，需要确定时间和任务# 1.时间 .---------------- minute (0 - 59)   # ">
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Linux定时任务"/>
-  <meta property="og:site_name" content="王霸天的博客"/>
 
-  
-    <meta property="og:image" content=""/>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <title>Linux定时任务 | 王霸天的博客</title>
 
-  
-  
-    <link href="/favicon.png" rel="icon">
-  
-  
-  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- Open Graph -->
+    <meta name="description" content="Linux定时任务通过制定 &#96;&#96;&#96;crontab -e&#96;&#96;编辑和开启定时任务 1234567891011121314151617181920212223242526# 创建一个完整的定时任务，需要确定时间和任务# 1.时间 .---------------- minute (0 - 59)   # 分 |  .------------- hour (0 - 23)     # 时 |  |  .-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux定时任务">
+<meta property="og:url" content="http://yoursite.com/2019/12/20/Linux%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/index.html">
+<meta property="og:site_name" content="王霸天的博客">
+<meta property="og:description" content="Linux定时任务通过制定 &#96;&#96;&#96;crontab -e&#96;&#96;编辑和开启定时任务 1234567891011121314151617181920212223242526# 创建一个完整的定时任务，需要确定时间和任务# 1.时间 .---------------- minute (0 - 59)   # 分 |  .------------- hour (0 - 23)     # 时 |  |  .-">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-12-20T10:32:03.065Z">
+<meta property="article:modified_time" content="2019-12-20T09:32:51.019Z">
+<meta property="article:author" content="wangx">
+<meta name="twitter:card" content="summary">
 
-  <script src="/js/jquery-2.0.3.min.js"></script>
-
-  <!-- analytics -->
-  
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-70812759-1', 'auto');
-  ga('send', 'pageview');
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:",
+  "image": "",
+  "name": "wangx",
+  "url": "http://yoursite.com"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
 </script>
 
-
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?cb5448498d7169c668b07c2b255d62c1";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-<meta name="generator" content="Hexo 4.1.1"></head>
-
- <body>  
-  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		<span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-	  <a class="navbar-brand" href="/">王霸天的博客</a>
-      <div class="collapse navbar-collapse nav-menu">
-		<ul class="nav navbar-nav">
-		  
-		  <li>
-			<a href="/archives" title="All the articles.">
-			  <i class=""></i>Archives
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/categories" title="All the categories.">
-			  <i class=""></i>Categories
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/tags" title="All the tags.">
-			  <i class=""></i>Tags
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/about" title="About me.">
-			  <i class=""></i>About
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/atom.xml" title="Subscribe me.">
-			  <i class=""></i>RSS
-			</a>
-		  </li>
-		  
-		</ul>
-      </div>
-    </div> <!-- container -->
-</nav>
-<div class="clearfix"></div>
-
-  <div class="container">
-  	<div class="content">
-    	 
-
-
-	
-		<div class="page-header">
-			<h1> Linux定时任务</h1>
-		</div>
-	
-
-
-
-<div class="row post">
-	<!-- cols -->
-	
-	<div id="top_meta"></div>
-	<div class="col-md-9">
-	
-
-	<!-- content -->
-	<div class="mypage">		
-	  		
-
-	  <h1 id="Linux定时任务"><a href="#Linux定时任务" class="headerlink" title="Linux定时任务"></a>Linux定时任务</h1><p>通过制定 ```crontab -e``编辑和开启定时任务</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建一个完整的定时任务，需要确定时间和任务</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 1.时间</span></span><br><span class="line"> .---------------- minute (0 - 59)   # 分</span><br><span class="line"> |  .------------- hour (0 - 23)     # 时</span><br><span class="line"> |  |  .---------- day of month (1 - 31)  # 日</span><br><span class="line"> |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...  # 月</span><br><span class="line"> |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span><br><span class="line"> |  |  |  |  |</span><br><span class="line"> *  *  *  *  * user-name  command to be executed</span><br><span class="line"> </span><br><span class="line"> * * * * *   		- 每分钟执行一次任务(每隔一分钟)</span><br><span class="line"> */1 * * * *        - 每分钟执行一次任务(每隔一分钟)</span><br><span class="line"> */2 * * * *        - 每2分钟执行一次任务(每隔2分钟)</span><br><span class="line"> * */1 * * *        - 每隔1小时</span><br><span class="line"> * * */1 * *        - 每隔1天</span><br><span class="line"> * * * */2 *        - 每隔两个月</span><br><span class="line"> * * * *  fri       - 每周五执行任务</span><br><span class="line"> </span><br><span class="line"> 30 * * * *         - 时间点到30分的时候做</span><br><span class="line"> 0  * * * *         - 时间点到整点的时候执行任务</span><br><span class="line"> 30 2 * * *         - 时间到 02:30 的时候执行任务</span><br><span class="line"> 0  12 28 * *       - 每月28号12:00执行任务</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 2.任务</span></span><br><span class="line">写Linux指令, 指令如果有结果，结果看不到</span><br></pre></td></tr></table></figure>
-
-	  
-	</div>
-
-	<div>
-  	<center>
-	<div class="pagination">
+    
 
     
     
-    <a href="/2019/12/20/Hexo博客搭建/" type="button" class="btn btn-default"><i
-                class="fa fa-arrow-circle-o-left"></i> Prev</a>
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
     
 
-    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+</head>
+<body id="body" style="margin-bottom: 0;" class="pushable">
+
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+    </div>
+
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
+
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>王霸天的博客</h3>
+        </div>
+    </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">wangx</a>
+                    
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                        
+                    </div>
+
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
     
-    <a href="/2019/12/20/shell编程/" type="button" class="btn btn-default ">Next<i
-                class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        HOME
+    </a>
+
     
 
     
 </div>
 
-    </center>
-	</div>
-	
-	<!-- comment -->
-	
-<section id="comment">
-    <h2 class="title">Comments</h2>
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-Linux定时任务" class="ui main container article-type-post">
 
     
-</section>
 
+    <div class="ui divided grid">
 
-	</div> <!-- col-md-9/col-md-12 -->
-		
-	
-	<div id="side_meta">
-		<div class="col-md-3" id="post_meta"> 
+        <div class="two column row" id="article-content">
 
-	<!-- date -->
-	
-	<div class="meta-widget">
-	<i class="fa fa-clock-o"></i>
-	2019-12-20 
-	</div>
-	
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
 
-	<!-- categories -->
+<h1 class="ui header">
     
-
-	<!-- tags -->
-		
-
-	<!-- toc -->
-	<div class="meta-widget">
-	
-	</div>
-	
-    <hr>
-	
-</div><!-- col-md-3 -->
-
-	</div>
-		
-
-</div><!-- row -->
+    Linux定时任务
+</h1>
 
 
 
-	</div>
-  </div>
-  <div class="container-narrow">
-  <footer> <p>
-  &copy; 2019 wangx
-  
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a>,<a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>,<a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>. 
-     <br> Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind.386</a>.    
-</p>
- </footer>
-</div> <!-- container-narrow -->
-  
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <h1 id="Linux定时任务"><a href="#Linux定时任务" class="headerlink" title="Linux定时任务"></a>Linux定时任务</h1><p>通过制定 ```crontab -e``编辑和开启定时任务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建一个完整的定时任务，需要确定时间和任务</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 1.时间</span></span><br><span class="line"> .---------------- minute (0 - 59)   # 分</span><br><span class="line"> |  .------------- hour (0 - 23)     # 时</span><br><span class="line"> |  |  .---------- day of month (1 - 31)  # 日</span><br><span class="line"> |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...  # 月</span><br><span class="line"> |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span><br><span class="line"> |  |  |  |  |</span><br><span class="line"> *  *  *  *  * user-name  command to be executed</span><br><span class="line"> </span><br><span class="line"> * * * * *   		- 每分钟执行一次任务(每隔一分钟)</span><br><span class="line"> */1 * * * *        - 每分钟执行一次任务(每隔一分钟)</span><br><span class="line"> */2 * * * *        - 每2分钟执行一次任务(每隔2分钟)</span><br><span class="line"> * */1 * * *        - 每隔1小时</span><br><span class="line"> * * */1 * *        - 每隔1天</span><br><span class="line"> * * * */2 *        - 每隔两个月</span><br><span class="line"> * * * *  fri       - 每周五执行任务</span><br><span class="line"> </span><br><span class="line"> 30 * * * *         - 时间点到30分的时候做</span><br><span class="line"> 0  * * * *         - 时间点到整点的时候执行任务</span><br><span class="line"> 30 2 * * *         - 时间到 02:30 的时候执行任务</span><br><span class="line"> 0  12 28 * *       - 每月28号12:00执行任务</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 2.任务</span></span><br><span class="line">写Linux指令, 指令如果有结果，结果看不到</span><br></pre></td></tr></table></figure>
 
 
-  
-<a id="gotop" href="#">   
-  <span>⬆︎TOP</span>
-</a>
+                        
+                    </div>
 
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/search.js"></script> 
+                    
+                    
+                    
+
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2019-12-20T10:32:03.065Z" itemprop="datePublished">2019-12-20</time>
+
+    </span>
+    <span class="post-description-item">
+        
+    </span>
+</div>
+
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
+
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a href="/2019/12/20/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="ui tiny button">
+
+                    <i class="angle left icon"></i>
+                    
+                    Hexo博客搭建
+                    
+
+                </a>
+
+                
+            </div>
+            <div class="column nav-right">
+                
+
+                <a href="/2019/12/20/shell%E7%BC%96%E7%A8%8B/" class="ui tiny button">
+                    
+                    shell编程
+                    
+                    <i class="angle right icon"></i></a>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+                
+            </div>
+
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#Linux定时任务"><span>Linux定时任务</span></a></li></ol>
+                </div>
+
+            </div>
+            
+
+        </div>
+    </div>
+</div>
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2019 <a href="/">wangx</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+</div>
+
+    </div>
+
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
 
 
 
 </body>
-   </html>
+</html>

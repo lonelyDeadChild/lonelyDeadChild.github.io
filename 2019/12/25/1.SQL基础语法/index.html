@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <title>1.SQL基础语法 | 王霸天的博客</title>
+
+    <!-- Open Graph -->
+    <meta name="description" content="1.SQL基础SQL又叫结构化查询语言，分为三大类：DDL(数据定义语言)、DML(数据操作语言)、DCL(数据控制语言)DDL：create(创建数据库和表)、drop(删除数据库和表)、alter(修改数据库和表)DML：insert(增)、delete(删)、update(改)、select(查)DCL：grant(授权)、revoke(召回授权) sql的注释是在注释前加–sql中sql的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1.SQL基础语法">
+<meta property="og:url" content="http://yoursite.com/2019/12/25/1.SQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="王霸天的博客">
+<meta property="og:description" content="1.SQL基础SQL又叫结构化查询语言，分为三大类：DDL(数据定义语言)、DML(数据操作语言)、DCL(数据控制语言)DDL：create(创建数据库和表)、drop(删除数据库和表)、alter(修改数据库和表)DML：insert(增)、delete(删)、update(改)、select(查)DCL：grant(授权)、revoke(召回授权) sql的注释是在注释前加–sql中sql的">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-12-25T02:37:51.075Z">
+<meta property="article:modified_time" content="2019-12-25T02:37:25.421Z">
+<meta property="article:author" content="wangx">
+<meta name="twitter:card" content="summary">
+
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:",
+  "image": "",
+  "name": "wangx",
+  "url": "http://yoursite.com"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
+</script>
+
+    
+
+    
+    
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
+
+</head>
+<body id="body" style="margin-bottom: 0;" class="pushable">
+
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+    </div>
+
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
+
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>王霸天的博客</h3>
+        </div>
+    </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">wangx</a>
+                    
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                        
+                    </div>
+
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+    
+    
+
+    
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        HOME
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-1.SQL基础语法" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+<h1 class="ui header">
+    
+    1.SQL基础语法
+</h1>
+
+
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <p>1.SQL基础<br>SQL又叫结构化查询语言，分为三大类：DDL(数据定义语言)、DML(数据操作语言)、DCL(数据控制语言)<br>DDL：create(创建数据库和表)、drop(删除数据库和表)、alter(修改数据库和表)<br>DML：insert(增)、delete(删)、update(改)、select(查)<br>DCL：grant(授权)、revoke(召回授权)</p>
+<p>sql的注释是在注释前加–<br>sql中sql的关键字不区分大小写<br>sql语句结束后要加分号</p>
+<p>—————–DDL(数据定义语言)—————————-<br>=================数据库操作============================<br>1.创建数据库<br>create database 数据库名称;  – 创建指定数据库，如果这个数据可已经存在，会报错<br>create database if not exists 数据库名称;  – 当指定的数据库不存在的时候创建对应的数据库<br>create database if not exists 数据库名称 default charset utf8;  – 创建数据库的时候指定数据文件编码方式</p>
+<figure class="highlight plain"><figcaption><span>database if not exists school default  charset utf8;```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2.删除数据库</span><br><span class="line">drop database 数据库名;</span><br><span class="line">drop database if exists 数据库名称;</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;drop database school;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>database if exists school;```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3.切换&#x2F;使用数据库</span><br><span class="line">use 数据库名;   -- 切换到&#x2F;使用指定数据库，切换后所有数据库相关操作都是针对这个数据库</span><br><span class="line">&#96;&#96;&#96;use school;</span><br></pre></td></tr></table></figure>
+
+<p>==============表操作=====================<br>创建表(数据库文件是通过表来存数据的)</p>
+<p>create table 表名/create table if not exists 表名(<br>字段名1 类型名1 约束1,<br>字段名2 类型名2 约束2,<br>字段名3 类型名3 约束3,<br> …<br>)<br>注意：字段中一定要有一个字段来作为主键(可以表示为一一条记录)；主键要求不能为空，并且是唯一的，而且数据类型是整型<br>类型名：必须是当前数据库支持的数据类型<br>mysql常用的数据类型：int，float，double，varchar(字符串)/text(字符串)，bit(布尔，0和1)，date/datetime(日期和时间)<br>约束：not null(非空约束), unique(唯一约束), default(默认值约束), primary key(主键约束), foreign key(外键约束), auto_increment(自动增加)<br>注意：约束可以没有也可以有多个</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">create table if not exists tb_students</span><br><span class="line">(</span><br><span class="line">stuid int primary key auto_increment,</span><br><span class="line">stuname varchar(4) not null,</span><br><span class="line">stubirth date,</span><br><span class="line">stugender bit default 1,</span><br><span class="line">stutel VARCHAR(11) unique</span><br><span class="line">-- primary key(stuid) -- 主键约束还可以单独约束</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>2.删除表<br>drop table if exists 表名;  –删除指定的表<br>drop table if exists tb_students</p>
+<p>3.修改表<br>3.1 添加字段<br>alter table 表名 add column 字段名 字段类型 约束;</p>
+<figure class="highlight plain"><figcaption><span>table tb_students add column stuaddr varchar(200);```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3.2 删除字段</span><br><span class="line">alter table 表名 drop column 字段名;</span><br><span class="line">alter table tb_students drop column stuaddr;</span><br><span class="line"></span><br><span class="line">3.3 修改字段名</span><br><span class="line">alter table 表名 change 原字段 新字段 新的类型;</span><br><span class="line">&#96;&#96;&#96;alter table tb_students change tel stutel varchar(11);</span><br></pre></td></tr></table></figure>
+
+<p>3.4 添加删除约束<br>添加约束的方式<br>3.4.1 在创建表或者添加字段的时候，直接在字段后面添加约束<br>3.4.2 通过修改表的方式添加和删除约束。<br>alter table 表名 add constraint 约束索引 约束名(字段)；  - 给指定字段添加指定约束(只能添加唯一约束和主键约束)<br>alter table 表名 drop constraint 约束索引名；- 删除指定约束</p>
+<figure class="highlight plain"><figcaption><span>TABLE tb_student add constraint unique_colid UNIQUE(cid);```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;ALTER TABLE tb_student DROP INDEX unique_colid;</span><br></pre></td></tr></table></figure>
+
+<p>———————DML(数据操作语言)—————————<br>数据库操作语言主要提供表中数据的曾、删、改、查操作</p>
+<p>===================1.insert==================================<br>insert into 表名 values(值1, 值2, 值3…);  - 按表中字段的顺序依次给每个字段赋值，最终形成一条新的记录<br>insert into 表名(字段1, 字段2, 字段3…) values(值1, 值2, 值3…); - 按指定顺序给指定字段赋值<br>insert into 表名(字段1, 字段2, 字段3…) values(值11, 值21, 值31…),(值12, 值22, 值32…),(值13, 值23, 值33…)…; - 同时插入多条记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">insert into tb_students values(1001, &#39;宝儿姐&#39;, &#39;2019-10-20&#39;, 0, &#39;13345678941&#39;);</span><br><span class="line">insert into tb_students(stuname,stutel,stubirth) values(&#39;张楚楠&#39;, &#39;18912345678&#39;, DATE(NOW()));</span><br><span class="line">insert into tb_students(stuname,stutel,stubirth, stugender) values</span><br><span class="line">(&#39;徐三&#39;, &#39;18965432171&#39;, &#39;1987-3-25&#39;, 1),</span><br><span class="line">(&#39;徐四&#39;, &#39;18965432145&#39;, &#39;1990-9-13&#39;, 1),</span><br><span class="line">(&#39;夏禾&#39;, &#39;18965432134&#39;, &#39;1993-2-1&#39;, 0),</span><br><span class="line">(&#39;柳妍妍&#39;, &#39;18912345659&#39;, &#39;2000-10-20&#39;, 0),</span><br><span class="line">(&#39;龚庆&#39;, &#39;18965432132&#39;, &#39;1998-4-9&#39;, 1),</span><br><span class="line">(&#39;吕良&#39;, &#39;18965432133&#39;, &#39;1987-8-25&#39;, 1),</span><br><span class="line">(&#39;窦梅&#39;, &#39;18965432124&#39;, &#39;1980-3-24&#39;, 0),</span><br><span class="line">(&#39;沈冲&#39;, &#39;18965432135&#39;, &#39;1991-2-19&#39;, 1),</span><br><span class="line">(&#39;高宁&#39;, &#39;18965432136&#39;, &#39;1985-6-20&#39;, 1);</span><br></pre></td></tr></table></figure>
+
+<p>补充1：值的问题<br>字符串  -  用引号引起来<br>日期  -  1)日期字符串  2)date(now()) - 当前日期  year(now())-当前年 month(now())-当前月 day(now())-当前日<br>布尔  -  0或1</p>
+<p>===================2.delete==================================<br>delete from 表名;  -  删除当前表中的所有记录(清空表)</p>
+<p>delete from 表名 where 条件;  -  删除所有满足条件的记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">delete from tb_students where stuname&#x3D;&#39;宝儿姐&#39;;</span><br><span class="line">delete from tb_students where not stuname&#x3D;&#39;夏禾&#39;;  -- 删除stuname不是夏禾的所有记录</span><br><span class="line">delete from tb_students where stuid&gt;1014; -- 删除stuid值大于1014的所有记录</span><br><span class="line">delete from tb_students where stuid&gt;1012 and stugender&#x3D;0; -- 删除stuid大于1012并且stugender是0的所有记录</span><br><span class="line">delete from tb_students where stuname in (&#39;宝儿姐&#39;,&#39;徐三&#39;,&#39;许思&#39;,&#39;徐四&#39;); -- 删除stuname的值在(&#39;宝儿姐&#39;,&#39;徐三&#39;,&#39;许思&#39;,&#39;徐四&#39;)中的所有记录</span><br><span class="line">delete from tb_students where stubirth between &#39;1980-0-1-1&#39; and &#39;1989-12-31&#39;; -- 删除stubrith在&#39;1980-0-1-1&#39;到&#39;1989-12-31&#39;之间的所有记录</span><br><span class="line">delete from tb_students where stubirth is null; -- 删除stubrith为空的记录</span><br><span class="line">delete from tb_students where stuname like &#39;徐%&#39;; -- 删除stuname是徐开头的所有记录</span><br><span class="line">delete from tb_students where stutel like &#39;%8&#39;; -- 删除stutel最后一位是8的所有记录</span><br><span class="line">delete from tb_students where stutel like &#39;__8%&#39;; -- 删除stutel第三位是8的所有记录</span><br></pre></td></tr></table></figure>
+
+<p>补充：mysql条件语句的写法(筛选)<br>比较运算：=,&lt;&gt;(不等于),&gt;,&lt;,&gt;=,&lt;=<br>逻辑运算: and, or, not<br>集合包含：in<br>范围: BETWEEN…and<br>判断是否为空：is null, is not null<br>筛选：like(% - 任意个任意字符，% - 一个任意字符)</p>
+<p>===================3.update==================================</p>
+<figure class="highlight plain"><figcaption><span>table tb_students add column stuaddr varchar(255);```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">update 表名 set 字段1&#x3D;值1,字段2&#x3D;值2,字段3&#x3D;值3...; -- 将指定表中所有记录中指定的字段修改成指定的值</span><br><span class="line">&#96;&#96;&#96;update tb_students set stuaddr&#x3D;&#39;成都&#39;;</span><br></pre></td></tr></table></figure>
+
+<p>update 表名 set 字段1=值1,字段2=值2,字段3=值3… where 条件; – 将满足条件的记录的指定字段设置为指定的值</p>
+<figure class="highlight plain"><figcaption><span>tb_students set stuaddr</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;4.select&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">select * from 表名;  -  获取指定表中所有记录中所有字段的数据</span><br><span class="line">&#96;&#96;&#96;SELECT * FROM tb_students;</span><br></pre></td></tr></table></figure>
+
+<p>映射<br>select 字段1,字段2,字段3…from 表名; - 获取表中所有记录指定字段的数据</p>
+<figure class="highlight plain"><figcaption><span>stuname,stutel FROM tb_students;```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">列重命名</span><br><span class="line">select 字段1 as &#39;新字段名1&#39;,字段2, 字段3...from 表名;</span><br><span class="line">as 可以省略;</span><br><span class="line">&#96;&#96;&#96;SELECT stuname as &#39;姓名&#39;,stutel as &#39;电话&#39; FROM tb_students;</span><br></pre></td></tr></table></figure>
+
+<p>结果重新赋值(主要针对布尔)<br>select if(字段1，值1，值2) from 表名;  - mysql特有写法，如果if中对应的字段的值是1，最后结果是值1，否则是值2<br>SELECT if(stugender, ‘男’, ‘女’) as ‘性别’ FROM tb_students;</p>
+<figure class="highlight plain"><figcaption><span>case 字段 when 1 then 值1 else 值2 end from 表名;  - 通用写法```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;SELECT CASE stugender WHEN 1 THEN &#39;男&#39; else &#39;女&#39; end as &#39;性别&#39; FROM tb_students;</span><br></pre></td></tr></table></figure>
+
+<p>列合并(查询的时候，将多个字段合并成一个数据返回结果)<br>select concat(字段1, 字段2…) from 表名;</p>
+<figure class="highlight plain"><figcaption><span>CONCAT(stuid,stuname) FROM tb_students;```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">筛选</span><br><span class="line">select * from 表名 where 条件;</span><br><span class="line">&#96;&#96;&#96;select stuname,stutel from tb_students where stugender&#x3D;0;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>* FROM tb_students where stuname LIKE '徐%';```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">排序</span><br><span class="line">select * from 表名 order by 字段; - 将查询结果按指定字段的值从小到大排序</span><br><span class="line">select * from 表名 order by 字段 asc; - 将查询结果按指定字段的值从小到大排序</span><br><span class="line">&#96;&#96;&#96;SELECT * FROM tb_students ORDER BY stubirth;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>* FROM tb_students WHERE stugender</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select * from 表名 order by 字段 desc; - 将查询结果按指定字段的值从大到小排序</span><br><span class="line">&#96;&#96;&#96;SELECT * FROM tb_students ORDER BY stubirth DESC;</span><br></pre></td></tr></table></figure>
+<p><code>SELECT * FROM tb_students WHERE stugender=1 ORDER BY stubirth DESC;</code></p>
+
+                        
+                    </div>
+
+                    
+                    
+                    
+
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2019-12-25T02:37:51.075Z" itemprop="datePublished">2019-12-25</time>
+
+    </span>
+    <span class="post-description-item">
+        
+    </span>
+</div>
+
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
+
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a href="/2019/12/25/2.%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F%E5%92%8C%E9%AB%98%E7%BA%A7%E6%9F%A5%E8%AF%A2/" class="ui tiny button">
+
+                    <i class="angle left icon"></i>
+                    
+                    2.外键约束和高级查询
+                    
+
+                </a>
+
+                
+            </div>
+            <div class="column nav-right">
+                
+
+                <a href="/2019/12/20/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="ui tiny button">
+                    
+                    Hexo博客搭建
+                    
+                    <i class="angle right icon"></i></a>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+                
+            </div>
+
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    
+                </div>
+
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2019 <a href="/">wangx</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+</div>
+
+    </div>
+
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
+
+
+
+</body>
+</html>

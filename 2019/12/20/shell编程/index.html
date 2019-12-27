@@ -1,143 +1,147 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="pragma" content="no-cache">
-  <meta http-equiv="cache-control" content="no-cache">
-  <meta http-equiv="expires" content="0">
-  
-  <title>shell编程 | 王霸天的博客</title>
-  <meta name="author" content="wangx">
-  
-  <meta name="description" content="shell编程Shell脚本，是一种为shell编写的脚本程序。
-Shell编程跟JavaScript、Python编程一样，只要有一个能编写代码的文本编辑器和一个能解释执行的脚本解释器就可以了。
-Linux的Shell种类有很多，我们主要用的是Bourne Shell(/usr.bin/sh或/b">
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="shell编程"/>
-  <meta property="og:site_name" content="王霸天的博客"/>
 
-  
-    <meta property="og:image" content=""/>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <title>shell编程 | 王霸天的博客</title>
 
-  
-  
-    <link href="/favicon.png" rel="icon">
-  
-  
-  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- Open Graph -->
+    <meta name="description" content="shell编程Shell脚本，是一种为shell编写的脚本程序。 Shell编程跟JavaScript、Python编程一样，只要有一个能编写代码的文本编辑器和一个能解释执行的脚本解释器就可以了。 Linux的Shell种类有很多，我们主要用的是Bourne Shell(&#x2F;usr.bin&#x2F;sh或&#x2F;bin&#x2F;sh) 1.创建shell文件原则上shell程序可以写在任何文件中，但是一般会在shell文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell编程">
+<meta property="og:url" content="http://yoursite.com/2019/12/20/shell%E7%BC%96%E7%A8%8B/index.html">
+<meta property="og:site_name" content="王霸天的博客">
+<meta property="og:description" content="shell编程Shell脚本，是一种为shell编写的脚本程序。 Shell编程跟JavaScript、Python编程一样，只要有一个能编写代码的文本编辑器和一个能解释执行的脚本解释器就可以了。 Linux的Shell种类有很多，我们主要用的是Bourne Shell(&#x2F;usr.bin&#x2F;sh或&#x2F;bin&#x2F;sh) 1.创建shell文件原则上shell程序可以写在任何文件中，但是一般会在shell文">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-12-20T10:32:03.065Z">
+<meta property="article:modified_time" content="2019-12-20T09:32:54.641Z">
+<meta property="article:author" content="wangx">
+<meta name="twitter:card" content="summary">
 
-  <script src="/js/jquery-2.0.3.min.js"></script>
-
-  <!-- analytics -->
-  
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-70812759-1', 'auto');
-  ga('send', 'pageview');
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:",
+  "image": "",
+  "name": "wangx",
+  "url": "http://yoursite.com"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
 </script>
 
+    
+
+    
+    
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
+
+</head>
+<body id="body" style="margin-bottom: 0;" class="pushable">
+
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+    </div>
+
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
+
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>王霸天的博客</h3>
+        </div>
+    </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">wangx</a>
+                    
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                        
+                    </div>
+
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?cb5448498d7169c668b07c2b255d62c1";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+</div>
 
+    
+    
 
-<meta name="generator" content="Hexo 4.1.1"></head>
+    
 
- <body>  
-  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		<span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-	  <a class="navbar-brand" href="/">王霸天的博客</a>
-      <div class="collapse navbar-collapse nav-menu">
-		<ul class="nav navbar-nav">
-		  
-		  <li>
-			<a href="/archives" title="All the articles.">
-			  <i class=""></i>Archives
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/categories" title="All the categories.">
-			  <i class=""></i>Categories
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/tags" title="All the tags.">
-			  <i class=""></i>Tags
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/about" title="About me.">
-			  <i class=""></i>About
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/atom.xml" title="Subscribe me.">
-			  <i class=""></i>RSS
-			</a>
-		  </li>
-		  
-		</ul>
-      </div>
-    </div> <!-- container -->
-</nav>
-<div class="clearfix"></div>
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        HOME
+    </a>
 
-  <div class="container">
-  	<div class="content">
-    	 
+    
 
+    
+</div>
 
-	
-		<div class="page-header">
-			<h1> shell编程</h1>
-		</div>
-	
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-shell编程" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+<h1 class="ui header">
+    
+    shell编程
+</h1>
 
 
 
-<div class="row post">
-	<!-- cols -->
-	
-	<div id="top_meta"></div>
-	<div class="col-md-9">
-	
+                <div class="article-inner">
 
-	<!-- content -->
-	<div class="mypage">		
-	  		
-
-	  <h1 id="shell编程"><a href="#shell编程" class="headerlink" title="shell编程"></a>shell编程</h1><p>Shell脚本，是一种为shell编写的脚本程序。</p>
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <h1 id="shell编程"><a href="#shell编程" class="headerlink" title="shell编程"></a>shell编程</h1><p>Shell脚本，是一种为shell编写的脚本程序。</p>
 <p>Shell编程跟JavaScript、Python编程一样，只要有一个能编写代码的文本编辑器和一个能解释执行的脚本解释器就可以了。</p>
 <p>Linux的Shell种类有很多，我们主要用的是Bourne Shell(/usr.bin/sh或/bin/sh)</p>
 <h5 id="1-创建shell文件"><a href="#1-创建shell文件" class="headerlink" title="1.创建shell文件"></a>1.创建shell文件</h5><p>原则上shell程序可以写在任何文件中，但是一般会在shell文件后加后缀.sh表示当前文件是一个shell文件</p>
@@ -233,111 +237,110 @@ var _hmt = _hmt || [];
 
 
 
-	  
-	</div>
 
-	<div>
-  	<center>
-	<div class="pagination">
+                        
+                    </div>
 
-    
-    
-    <a href="/2019/12/20/Linux定时任务/" type="button" class="btn btn-default"><i
-                class="fa fa-arrow-circle-o-left"></i> Prev</a>
-    
+                    
+                    
+                    
 
-    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
-    
-    <a href="/2019/12/20/git常用指令/" type="button" class="btn btn-default ">Next<i
-                class="fa fa-arrow-circle-o-right"></i></a>
-    
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2019-12-20T10:32:03.065Z" itemprop="datePublished">2019-12-20</time>
 
-    
+    </span>
+    <span class="post-description-item">
+        
+    </span>
 </div>
 
-    </center>
-	</div>
-	
-	<!-- comment -->
-	
-<section id="comment">
-    <h2 class="title">Comments</h2>
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
 
-    
-</section>
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
 
+                <a href="/2019/12/20/Linux%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/" class="ui tiny button">
 
-	</div> <!-- col-md-9/col-md-12 -->
-		
-	
-	<div id="side_meta">
-		<div class="col-md-3" id="post_meta"> 
+                    <i class="angle left icon"></i>
+                    
+                    Linux定时任务
+                    
 
-	<!-- date -->
-	
-	<div class="meta-widget">
-	<i class="fa fa-clock-o"></i>
-	2019-12-20 
-	</div>
-	
+                </a>
 
-	<!-- categories -->
-    
+                
+            </div>
+            <div class="column nav-right">
+                
 
-	<!-- tags -->
-		
+                <a href="/2019/12/20/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="ui tiny button">
+                    
+                    git常用指令
+                    
+                    <i class="angle right icon"></i></a>
+                
+            </div>
+        </div>
+    </div>
 
-	<!-- toc -->
-	<div class="meta-widget">
-	
-	</div>
-	
-    <hr>
-	
-</div><!-- col-md-3 -->
+</div>
+                
+            </div>
 
-	</div>
-		
+            
+            <div class="three wide computer three wide tablet column">
 
-</div><!-- row -->
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#shell编程"><span>shell编程</span></a><ol><li><a href="#1-创建shell文件"><span>1.创建shell文件</span></a></li><li><a href="#2-基础语法"><span>2.基础语法</span></a><ol><li><a href="#1）注释"><span>1）注释</span></a></li><li><a href="#2）输出和输入"><span>2）输出和输入</span></a></li><li><a href="#3）变量"><span>3）变量</span></a></li><li><a href="#4）获取linux指令结果"><span>4）获取linux指令结果</span></a></li></ol></li><li><a href="#3-shell字符串"><span>3.shell字符串</span></a><ol><li><a href="#1）字符串拼接"><span>1）字符串拼接</span></a></li><li><a href="#2）获取字符串长度"><span>2）获取字符串长度</span></a></li><li><a href="#3）字符串提取"><span>3）字符串提取</span></a></li></ol></li><li><a href="#4-shell数组"><span>4.shell数组</span></a><ol><li><a href="#1）获取数组元素：-数组-下标"><span>1）获取数组元素：${数组[下标]}</span></a></li><li><a href="#2）获取数组的长度"><span>2）获取数组的长度</span></a></li></ol></li><li><a href="#5-运算符"><span>5.运算符</span></a><ol><li><a href="#1）算术运算符：-，-，-，-，"><span>1）算术运算符：+，-，*，/，%</span></a></li><li><a href="#2）-关系运算符-比较运算符-，比较的是数字大小"><span>2） 关系运算符(比较运算符)，比较的是数字大小</span></a></li><li><a href="#3）布尔运算符-逻辑运算符"><span>3）布尔运算符(逻辑运算符)</span></a></li><li><a href="#4）字符串运算符"><span>4）字符串运算符</span></a></li></ol></li><li><a href="#6-if语句"><span>6. if语句</span></a></li><li><a href="#7-for循环"><span>7. for循环</span></a></li><li><a href="#8-while循环"><span>8. while循环</span></a></li><li><a href="#9-函数"><span>9.函数</span></a><ol><li><a href="#1）函数的声明和调用"><span>1）函数的声明和调用</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol>
+                </div>
 
+            </div>
+            
 
-
-	</div>
-  </div>
-  <div class="container-narrow">
-  <footer> <p>
-  &copy; 2019 wangx
-  
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a>,<a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>,<a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>. 
-     <br> Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind.386</a>.    
-</p>
- </footer>
-</div> <!-- container-narrow -->
-  
+        </div>
+    </div>
+</div>
 
 
-  
-<a id="gotop" href="#">   
-  <span>⬆︎TOP</span>
-</a>
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2019 <a href="/">wangx</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+</div>
 
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/search.js"></script> 
+    </div>
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
 
 
 
 </body>
-   </html>
+</html>
