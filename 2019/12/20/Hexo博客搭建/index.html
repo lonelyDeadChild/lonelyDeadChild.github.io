@@ -1,149 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo博客搭建 | 王霸天的博客</title>
+  <meta name="author" content="wangx">
+  
+  <meta name="description" content="Hexo博客搭建   
+###1. 搭建博客使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js   
 
+首先在自己的电脑上创建一个空的文件夹’Hexo’  
 
-<!DOCTYPE html>
-<html lang="en">
-<head prefix="og: http://ogp.me/ns#">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <meta name="description" content="">
-    <title>Hexo博客搭建 | 王霸天的博客</title>
+在gitbash中终端中通过cd指令进入到刚才创建的文件夹中   
 
-    <!-- Open Graph -->
-    <meta name="description" content="Hexo博客搭建    ###1. 搭建博客使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js     首先在自己的电脑上创建一个空的文件夹’Hexo’    在gitbash中终端中通过cd指令进入到刚才创建的文件夹中     输入指令 npm install -g hexo 安装Hexo    输入指令 hexo init 进行初始化    依次输入指令npm insta">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo博客搭建">
-<meta property="og:url" content="http://yoursite.com/2019/12/20/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.html">
-<meta property="og:site_name" content="王霸天的博客">
-<meta property="og:description" content="Hexo博客搭建    ###1. 搭建博客使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js     首先在自己的电脑上创建一个空的文件夹’Hexo’    在gitbash中终端中通过cd指令进入到刚才创建的文件夹中     输入指令 npm install -g hexo 安装Hexo    输入指令 hexo init 进行初始化    依次输入指令npm insta">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/Users/yuting/Desktop/Files/Hexo/image1.png">
-<meta property="article:published_time" content="2019-12-20T10:32:03.065Z">
-<meta property="article:modified_time" content="2019-12-19T09:43:05.058Z">
-<meta property="article:author" content="wangx">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/Users/yuting/Desktop/Files/Hexo/image1.png">
+输入指令 npm install -g hexo">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Person",
-  "email": "mailto:",
-  "image": "",
-  "name": "wangx",
-  "url": "http://yoursite.com"
-}
-</script>
-    <script>
-    var algoliaEnabled = false;
-    
-</script>
+  <meta property="og:title" content="Hexo博客搭建"/>
+  <meta property="og:site_name" content="王霸天的博客"/>
 
-    
+  
+    <meta property="og:image" content=""/>
+  
 
-    
-    
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-    
-    
-    
-        <!-- stylesheets list from config.yml -->
-        
-        <link rel="stylesheet" href="/css/aloha.css">
-        
-        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
-        
-        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
-        
-    
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
 
-</head>
-<body id="body" style="margin-bottom: 0;" class="pushable">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
 
-    <div class="ui top fixed menu">
-        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
-    </div>
-
-    <div id="menu-sidebar" class="ui left vertical sidebar menu">
-
-    <div id="sidebar-top">
-        <div class="content">
-            <h3>王霸天的博客</h3>
-        </div>
-    </div>
-    <div class="ui container sidebar-card">
-    <div class="ui people shape content">
-        <div class="active side">
-            <div class="ui card">
-                <div class="image">
-                    <img class="ui medium bordered image" src="/images/avatar.jpg">
-                </div>
-                <div class="content">
-                    <a class="header">wangx</a>
-                    
-                </div>
-                <div class="extra content">
-                    <div class="ui list">
-                        
-                        
-                    </div>
-
-                </div>
-                <div class="extra content">
-                    <div class="ui list">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-</div>
-
-    
-    
-
-    
-
-    
-    <a href="/index.html" class="item" >
-        <i class="home icon"></i>
-        HOME
-    </a>
-
-    
-
-    
-</div>
-
-    <div class="pusher body-content">
-        <div id="content" class="ui main container">
-            <!--<div class="ui one column grid">-->
-                <!--<div class="column">-->
-                    <!--<div class="ui main container">-->
-                        <div id="post-Hexo博客搭建" class="ui main container article-type-post">
-
-    
-
-    <div class="ui divided grid">
-
-        <div class="two column row" id="article-content">
-
-            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
-                
-
-<h1 class="ui header">
-    
-    Hexo博客搭建
-</h1>
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+    <script src="/js/marked.js"></script>
+    <script src="/js/comment.js"></script>
+    <script src="/js/timeago.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+	<script src="/js/spin.min.js"></script>
+  
+  <!-- analytics -->
+  
 
 
 
-                <div class="article-inner">
+<meta name="generator" content="Hexo 4.1.1"></head>
 
-                    <div class="article-entry" itemprop="articleBody">
-                        
-                        <p>Hexo博客搭建   </p>
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">王霸天的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Hexo博客搭建</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>Hexo博客搭建   </p>
 <p>###1. 搭建博客<br>使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js   </p>
 <ol>
 <li><p>首先在自己的电脑上创建一个空的文件夹’Hexo’  </p>
@@ -165,109 +152,173 @@
 <li><p>输入指令<code>hexo clean</code> <code>hexo generate</code> <code>hexo deploy</code> 对博客进行提交</p>
 </li>
 </ol>
+	  
+	</div>
 
-                        
-                    </div>
+	<!-- recommended posts -->
+	
 
-                    
-                    
-                    
-
-                    <div class="description post-description">
-    <span class="post-description-item">
-        <time datetime="2019-12-20T10:32:03.065Z" itemprop="datePublished">2019-12-20</time>
-
-    </span>
-    <span class="post-description-item">
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
         
-    </span>
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2019/12/20/Linux定时任务/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
 </div>
 
-                </div>
-                
-                <div id="pagination" class="nav-web ui text container pagination">
+    </center>
+	</div>
 
-    <div class="ui stackable two column divided grid container">
-        <div class="row">
-            <div class="column nav-left">
-                
-
-                <a href="/2019/12/25/1.SQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="ui tiny button">
-
-                    <i class="angle left icon"></i>
-                    
-                    1.SQL基础语法
-                    
-
-                </a>
-
-                
-            </div>
-            <div class="column nav-right">
-                
-
-                <a href="/2019/12/20/Linux%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/" class="ui tiny button">
-                    
-                    Linux定时任务
-                    
-                    <i class="angle right icon"></i></a>
-                
-            </div>
-        </div>
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
     </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
 
-</div>
-                
-            </div>
 
-            
-            <div class="three wide computer three wide tablet column">
+        
 
-                <div class="ui sticky article-toc" id="article-toc">
-                    <!-- toc -->
-                    
-                </div>
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+    	 
+	 <div id="comment-thread"></div>
+	 <div id="loading-spin"></div>
+	 <script type="text/javascript">
+	   getComments({
+           type: "github" ? "github" : "github",       
+	       user: "wzpan",
+	       repo: "hexo-theme-freemind-blog",
+		   client_id: "bf7d4ba11877db88543e",
+           client_secret: "bff8a6b06b745c0bfcdccbe225623ea8e2a057bb",
+		   no_comment: "No comments yet. Press the button and go to comment now!",
+		   go_to_comment: "Go to comment",
+		   no_issue: "no_issue",
+		   issue_title: "Hexo博客搭建",
+		   issue_id: "",
+		   btn_class: "btn btn-primary",
+		   comments_target: "#comment-thread",
+		   loading_target: "#loading_spin"
+		   });
+	 </script>
+  
+</section>
 
-            </div>
-            
 
-        </div>
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2019-12-20 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
     </div>
-</div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2019 wangx
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
 
 
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        </div>
-        <div class="ui vertical footer segment">
-    <div class="ui center aligned container">
-        <div class="ui inverted section divider"></div>
-        &copy; 2019 <a href="/">wangx</a>,
-        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
-                href="http://hexo.io/" target="_blank">Hexo</a>.
-    </div>
-</div>
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
 
-    </div>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
 
 
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
 
 
-<!-- scripts list from theme config.yml -->
 
-<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
 
-<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+<!-- syntax highlighting -->
 
-<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
-
-<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
-
-<script src="/js/semantic-ui-algolia.js"></script>
-
-<script src="/js/aloha-events.js"></script>
-
+  <script>
+  marked.setOptions({
+    highlight: function (code, lang) {
+        return hljs.highlightAuto(code).value;
+    }
+  });
+  function Highlighting(){
+    var markdowns = document.getElementsByClassName('markdown');
+    for(var i=0;i<markdowns.length;i++){
+        if(markdowns[i].innerHTML) markdowns[i].innerHTML =marked(markdowns[i].innerHTML);
+    }
+  }
+  window.addEventListener('DOMContentLoaded', Highlighting, false);
+  window.addEventListener('load', Highlighting, false);
+  </script>
 
 
 </body>
