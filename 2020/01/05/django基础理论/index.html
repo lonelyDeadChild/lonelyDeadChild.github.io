@@ -70,7 +70,7 @@
 <p>Django ORM框架<br>对象关系映射框架 - 解决对象模型到关系模型双向转换问题</p>
 <p>1.修改配置文件setting<br>    INSTALLED_APPS = [<br>        ….<br>        ‘polls’,<br>    ]</p>
 <p>2.生成迁移<br>    python manage.py makemigrations polls<br>3.迁移<br>    python manage.py migrate</p>
-<p>– 创建数据库<br>create database django1906 default charset utf8;<br>– 创建用户<br>create user ‘jackfrued’@’%’ identified by ‘123456’;<br>– 给用户授权<br>grant all privileges on django1906.* to ‘jackfrued’@’%’;</p>
+<p>– 创建数据库<br>create database django1906 default charset utf8;<br>– 创建用户<br>create user ‘wangx’@’%’ identified by ‘123456’;<br>– 给用户授权<br>grant all privileges on django1906.* to ‘wangx’@’%’;</p>
 <p>创建django超级管理员账号<br>python manage.py createsuperuser</p>
 <p><a href="http://127.0.0.1:8000/admin/" target="_blank" rel="noopener">http://127.0.0.1:8000/admin/</a></p>
 <p>HTTP协议是无连接无状态协议  –&gt; 两次请求之间不会保存用户的任何数据<br>再次请求服务器的时候,服务器无法得知请求是来自那个用户的请求<br>一般情况下服务器应用都需要记住用户来为用户提供更好的服务</p>
